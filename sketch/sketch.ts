@@ -15,7 +15,6 @@ var sketch = (p: p5) => {
     p.background(360);
 
     const angleStep = 360 / 6;
-    p.rect(15, 15, 50, 50);
 
     p.beginShape(p.TRIANGLE_FAN);
     p.vertex(p.width / 2, p.height / 2);
