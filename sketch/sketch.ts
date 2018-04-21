@@ -14,13 +14,14 @@ var sketch = (p: p5) => {
     p.colorMode(p.HSB, 360, p.width, p.height);
     p.background(360);
 
-    const angleStep = 360 / 24;
+    const angleStep = 360 / 6;
+    p.rect(15, 15, 50, 50);
 
     p.beginShape(p.TRIANGLE_FAN);
     p.vertex(p.width / 2, p.height / 2);
     for (let angle = 0; angle <= 360; angle += angleStep) {
-      let vx = p.width / 2 + p.cos(p.radians(angle)) * 300;
-      let vy = p.height / 2 + p.sin(p.radians(angle)) * 300;
+      let vx = p.width / 2 + p.cos(p.radians(angle)) * 400;
+      let vy = p.height / 2 + p.sin(p.radians(angle)) * 400;
       p.vertex(vx, vy);
       p.fill(angle, p.mouseX, p.mouseY);
     }
